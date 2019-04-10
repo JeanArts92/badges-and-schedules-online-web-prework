@@ -5,7 +5,11 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  attendees.map! {|n| "Hello, my name is #{n}."}
+  badges=[]
+  attendees.each do|badge|
+  badges.push("Hello, my name is #{badge}.")
+  end
+  return badges
 end
 
  def assign_rooms(attendees)
@@ -21,11 +25,11 @@ def printer(attendees)
     puts badge
   end
   
-  def printer(attendees)
-    assign_rooms(attendees).each do |badge, number|
-  puts badge, number
-end
-end
+  assign_rooms(attendees).each do |badge|
+    puts badge
+  end
+end 
+  
 
 
   
